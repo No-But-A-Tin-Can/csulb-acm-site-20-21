@@ -1,0 +1,716 @@
+/* Fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700|Nunito+Sans:600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Removes unwanted spacing*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CFD5E1;
+}
+
+::selection {
+  background: #e6ecf0;
+}
+
+
+#canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+/* Video background */
+#background {
+	position: fixed;
+	z-index: -2;
+	top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.active {
+    background-color: rgba(108, 118, 122, 0.8);
+}
+
+
+/* Positioning the top header */
+header {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px 10px;
+    position: fixed;
+    z-index:1000;
+    width: 100%;
+    top: 0;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+
+/* Styling the header links */
+header a {
+    padding: 12px;
+    line-height: 20px;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: #B0BCD4;
+    text-transform: uppercase;
+}
+
+
+/* Positioning the ACM logo */
+#header-logo {
+    float: left;
+    max-height: 40px;
+    padding-left: 1%;
+}
+
+
+/* Positioning the links */
+#header-items {
+    padding-top: 10px;
+    padding-right: 2%;
+    float: right;
+}
+
+
+/* Each section will be the same height as the screen */
+#home-section, #about-section {
+    height: calc(100vh + 50px);
+}
+
+
+/* Styling the home page */
+#home-content {
+    text-align: center;
+}
+
+
+/* Positioning the content */
+#home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Styling the main title class */
+.title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #FFF;
+}
+
+
+/* Styling the subtitle class*/
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #B0BCD4;
+}
+
+@media screen and (max-width: 800px){
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 300px){
+  .title {
+    font-size: 15px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+}
+
+
+/* Styling the Discord invitation button */
+.discord-btn {
+	background: #7289DA;
+	border: none;
+	padding: 15px 0;
+	border-radius: 3px;
+	cursor: pointer;
+    width: 250px;
+    margin: auto;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+
+.discord-btn:hover {
+    background: #7786bd;
+}
+
+/* Styling the link in the Discord invitation button*/
+.discord-btn a {
+    font-family: 'Montserrat';
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* Styling the Discord icon */
+#discord-btn-icon {
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+
+/* Styling the headings for each section */
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: #AFB7BE;
+    padding: 0 7vw;
+}
+
+/*--------------------BEGIN ABOUT SECTION---------------------*/
+
+/* Centering the about section */
+#about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Styling the about box */
+#about-content {
+  background-color: #EEEEEE;
+  background-image: url(../media/square_bg.png);
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#about-boxes {
+  display: flex;
+}
+/*Styling the applications button */
+.apps-btn {
+	background: red;
+	border: none;
+	padding: 15px 0;
+	border-radius: 3px;
+	cursor: pointer;
+    width: 250px;
+    margin: auto;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+/* Styling each column in the box */
+.about-box {
+  background-color: rgba(176,188,212, 0.5);
+  width: calc(100% * 1/4);
+  margin: 10px auto;
+  padding: 15px;
+  font-family: 'Nunito Sans';
+  font-size: 19px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  #about-boxes {
+    display: block;
+  }
+
+  .about-box {
+    width: 80%;
+  }
+
+  #about-section {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 25px;
+  }
+
+  #about-boxes {
+    display: block;
+  }
+
+  . {
+    widtabout-boxh: 80%;
+    font-size: 14px;
+  }
+
+  #about-section {
+    height: auto;
+  }
+}
+
+
+
+.about-img {
+  width: 100%;
+}
+
+/*--------------------END ABOUT SECTION---------------------*/
+
+/*--------------------BEGIN CALENDAR SECTION---------------------*/
+#calendar-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#calendar-content {
+  background-color: #EEEEEE;
+  background-image: url(../media/square_bg.png);
+  max-width: 1500px;
+  width: 100%;
+  margin: 100px auto 50px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .large-container {
+    display:none;
+  }
+}
+
+@media (min-width: 800px) {
+  .small-container {
+    display:none
+  }
+}
+
+.calendar-container {
+  position: relative;
+  padding-top: 30%;
+  padding-bottom: 15%;
+  height: 0;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 800px;
+  height: 100%;
+}
+
+/*--------------------END CALENDAR SECTION---------------------*/
+
+/*--------------------BEGIN OFFICERS SECTION---------------------*/
+
+/* Centering the officers section */
+#officers-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Styling the about box */
+#officers-content {
+  background-color: #EEEEEE;
+  background-image: url(../media/square_bg.png);
+  max-width: 1500px;
+  margin: 100px auto 50px auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+.card {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 5px;
+}
+
+
+.top-card {
+  height: 40%;
+  background-color: #B0BCD4;
+  border-radius: 10px 10px 0 0;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 6px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.middle-card {
+  height: 40%;
+  background-color: #EEEEEE;
+  border-radius: 0px 0px 10px 0px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05), 0 6px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.bottom-card {
+  height: 20%;
+  border-radius: 0px 0px 10px 10px;
+  text-align: left;
+}
+
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+
+/* Positioning the top left half of the profile (icon) */
+.left-card {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  float: left;
+}
+
+
+/* Positioning the top right half of the profile (name/position) */
+.right-card {
+  float: right;
+  padding-right: 20px;
+}
+
+
+/* Styling text on the profiles */
+.profile-name {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-size: 25px;
+  margin: 20px 5px;
+}
+
+.position-name {
+  text-align: center;
+  font-family: 'Nunito Sans';
+  font-size: 23px;
+  color: white;
+  line-height: 0;
+}
+
+
+
+.profile-desc {
+  padding: 20px;
+  font-family: 'Nunito Sans';
+}
+
+
+/* Styling each profile flag */
+.profile-flag {
+  padding: 15px;
+  display: inline-block;
+  background-color: #828282;
+  border-radius: 0px 0px 10px 10px;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:all .5s ease;
+}
+
+.profile-flag:hover {
+  background-color: #545454;
+  line-height: 30px;
+}
+
+
+/* Styling social media icons in the flags of the profiles */
+.profile-icon {
+  color: #FFF;
+  font-size: 25px;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+
+.profile-icon:hover {
+  color: #dbdbdb;
+
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+  }
+
+
+  .top-card {
+    height: 40%;
+    background-color: #B0BCD4;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.05), 0 6px 5px 0 rgba(0, 0, 0, 0.05);
+  }
+
+
+  .middle-card {
+    height: 40%;
+    background-color: #EEEEEE;
+    border-radius: 0px 0px 5px 0px;
+    box-shadow: 0 4px 3px 0 rgba(0, 0, 0, 0.05), 0 6px 5px 0 rgba(0, 0, 0, 0.05);
+  }
+
+
+  .bottom-card {
+    height: 20%;
+    border-radius: 0px 0px 5px 5px;
+    text-align: left;
+  }
+
+
+  .profile-photo {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+
+  /* Positioning the top left half of the profile (icon) */
+  .left-card {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    float: left;
+  }
+
+
+  /* Positioning the top right half of the profile (name/position) */
+  .right-card {
+    float: right;
+    padding-right: 10px;
+  }
+
+
+  /* Styling text on the profiles */
+  .profile-name {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 10px 5px;
+  }
+
+  .position-name {
+    text-align: center;
+    font-family: 'Nunito Sans';
+    font-size: 14px;
+    color: white;
+    line-height: 0;
+  }
+
+
+
+  .profile-desc {
+    padding: 10px;
+    font-family: 'Nunito Sans';
+    font-size: 12px;
+  }
+
+
+  /* Styling each profile flag */
+  .profile-flag {
+    padding: 7px;
+    display: inline-block;
+    background-color: #828282;
+    border-radius: 0px 0px 5px 5px;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:all .5s ease;
+  }
+
+  .profile-flag:hover {
+    background-color: #545454;
+    line-height: 15px;
+  }
+
+
+  /* Styling social media icons in the flags of the profiles */
+  .profile-icon {
+    color: #FFF;
+    font-size: 18px;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+  }
+}
+
+/*--------------------END OFFICERS SECTION---------------------*/
+
+/*--------------------BEGIN BEACHHACKS SECTION---------------------*/
+#beachhacks-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#beachhacks-content {
+    background-color: #EEEEEE;
+    background-image: url(../media/square_bg.png);
+    max-width: 1500px;
+    width: 100%;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    text-align: center;
+}
+/*--------------------END BEACHHACKS SECTION---------------------*/
+
+/*--------------------BEGIN INSTAGRAM SECTION---------------------*/
+#instagram-content {
+    background-color: #EEEEEE;
+    background-image: url(../media/square_bg.png);
+    max-width: 1500px;
+    width: 100%;
+    margin: 100px auto 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    text-align: center;
+}
+/*--------------------END INSTAGRAM SECTION---------------------*/
+
+/* Styling the footer */
+footer {
+    background-color: rgba(176,188,212, 0.5);
+    width: 100%;
+    display: flex;
+}
+
+
+/* Setting the sizes / spacing for each column in the footer */
+.footer-item {
+    width: calc(100% * 1/3);
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+/* Styling each heading in the footer */
+.footer-heading {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+}
+
+
+/* Styling the p text in the footer */
+.footer-desc-p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #FFF;
+    line-height: 10px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-desc-p {
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer-desc-p {
+    font-size: 10px;
+    line-height: 10px;
+  }
+  .footer-heading {
+    font-size: 12px;
+  }
+}
+
+/* Styling the social media icons on the footer */
+.footer-icon {
+    font-size: calc(10px + 1vw);
+    color: #FFF;
+    padding: 0 10px;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.footer-icon:hover {
+    color: #dbdbdb;
+}
